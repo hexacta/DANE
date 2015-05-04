@@ -1,0 +1,1037 @@
+
+#mainContainer{
+	/*background-image: url(../images/background.png);*/
+}
+
+/**********************/
+/* home screen styles */
+/**********************/ 
+/* background*/
+#select_category {
+    background: url(../images/home-screen.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/*titulo*/
+.titulo {
+    background: transparent url(../images/select-speed.png) center top no-repeat;
+    background-size: cover;
+    font-size: 270%;
+    text-indent: -10000px;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+    height: 380px;
+}
+
+/* slider (selector de velocidad)*/
+.slider-wrapper {
+    text-align: center;
+    padding: 5px;
+}
+
+
+.slider-wrapper div.ui-slider {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    height: 25px;
+    padding: 0;
+    margin: 0 2% 0 20px;
+    top: 4px;
+    width: 65%;
+}
+
+.slider-wrapper .ui-btn-down-c {
+    border: 1px solid black;
+    background: #4E4E4E;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 0 1px 0 white;
+    background-image: -webkit-gradient(linear,left top,left bottom,from( #204268 ),to( #2E7CD5 ));
+    background-image: -webkit-linear-gradient( #204268,#2E7CD5 );
+    background-image: -moz-linear-gradient( #204268,#2E7CD5 );
+    background-image: -ms-linear-gradient( #204268,#2E7CD5 );
+    background-image: -o-linear-gradient( #204268,#2E7CD5 );
+    background-image: linear-gradient( #204268,#2E7CD5 );
+    box-shadow: 0 2px 0px rgba(255, 255, 255, 0.3);
+}
+
+.slider-wrapper a.ui-btn.ui-slider-handle {
+    background: white url(../images/bubble-overlay.png);
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    margin: -25px 0 0 -15px;
+    outline: 0;
+
+    -moz-border-radius-topleft:2em;
+    -webkit-border-radius:2em;
+    border-radius:2em
+
+}
+
+/*carousel*/
+#slider img {
+    margin-top: 20%;
+}
+
+.overlay {
+    background: url( ../images/bubble-overlay.png) center center no-repeat;
+    background-size: cover;
+    width: 190px;
+    height: 190px;
+}
+
+#imageMoveContainer {
+    opacity: 0.8;
+}
+
+
+#mainContainer div {
+	width: 190px;
+	height: 190px;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    #mainContainer div {
+		width: 285px;
+		height: 285px;
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    #mainContainer div {
+		width: 143px;
+		height: 143px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* win page */
+/*----------------------------------------------------------------------------------------*/
+#win_page {
+	background: red url(../images/winpage/winscreen.jpg);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+#win_page div img {
+	max-width: 100%;
+	height: auto;
+
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* category backgrounds */
+/*----------------------------------------------------------------------------------------*/
+.categoryAnimals{
+	background-image: url(../images/mdpi/bg/animales.jpg);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.categoryHouse{
+	background-image: url(../images/mdpi/bg/house.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.categoryClothes{
+	background-image: url(../images/hdpi/bg/ropa.jpg);
+	background-size: cover;
+	background-position: center center;	
+}
+
+.categoryAlimentos{
+	background-image: url(../images/hdpi/bg/alimentos.jpg);
+	background-size: cover;
+	background-position: center center;	
+}
+
+.categoryGestos{
+	background-image: url(../images/hdpi/bg/gestos.jpg);
+	background-size: cover;
+	background-position: center center;	
+}
+
+.categoryColores{
+	background-image: url(../images/hdpi/bg/colores.jpg);
+	background-size: cover;
+	background-position: center center;	
+}
+
+.categoryJuguetes{
+	background-image: url(../images/hdpi/bg/juguetes.jpg);
+	background-size: cover;
+	background-position: center center;	
+}
+
+.categoryVehiculos{
+	background-image: url(../images/hdpi/bg/vehiculos.jpg);
+	background-size: cover;
+	background-position: center center;	
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 1 (Animals)*/
+/*----------------------------------------------------------------------------------------*/
+
+.category1stage1 {
+    background-image: url(../images/mdpi/animales/delfin-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category1stage1 {
+		background-image: url(../images/hdpi/animales/delfin-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category1stage1 {
+		background-image: url(../images/ldpi/animales/delfin-ldpi.png);
+    }
+}
+
+
+
+.category1stage2 {
+    background-image: url(../images/mdpi/animales/jirafa-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category1stage2 {
+        background-image: url(../images/hdpi/animales/jirafa-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category1stage2 {
+        background-image: url(../images/ldpi/animales/jirafa-ldpi.png);
+    }
+}
+
+
+
+.category1stage3 {
+    background-image: url(../images/mdpi/animales/leon-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category1stage3 {
+        background-image: url(../images/hdpi/animales/leon-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category1stage3 {
+        background-image: url(../images/ldpi/animales/leon-ldpi.png);
+    }
+}
+
+
+
+.category1stage4 {
+    background-image: url(../images/mdpi/animales/pato-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category1stage4 {
+        background-image: url(../images/hdpi/pato-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category1stage4 {
+        background-image: url(../images/ldpi/animales/pato-ldpi.png);
+    }
+}
+
+
+
+.category1stage5 {
+    background-image: url(../images/mdpi/animales/perro-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category1stage5 {
+        background-image: url(../images/hdpi/animales/perro-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category1stage5 {
+        background-image: url(../images/ldpi/animales/perro-ldpi.png);
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 2 (House)*/
+/*----------------------------------------------------------------------------------------*/
+.category2stage1 {
+    background-image: url(../images/mdpi/casa/silla-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category2stage1 {
+		background-image: url(../images/hdpi/casa/silla-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category2stage1 {
+		background-image: url(../images/ldpi/casa/silla-ldpi.png);
+    }
+}
+
+
+
+.category2stage2 {
+    background-image: url(../images/mdpi/casa/sillon-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category2stage2 {
+		background-image: url(../images/hdpi/casa/sillon-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category2stage2 {
+		background-image: url(../images/ldpi/casa/sillon-ldpi.png);
+    }
+}
+
+
+
+.category2stage3 {
+    background-image: url(../images/mdpi/casa/mesa-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category2stage3 {
+		background-image: url(../images/hdpi/casa/mesa-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category2stage3 {
+		background-image: url(../images/ldpi/casa/mesa-ldpi.png);
+    }
+}
+
+
+
+.category2stage4 {
+    background-image: url(../images/mdpi/casa/armario-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category2stage4 {
+		background-image: url(../images/hdpi/casa/armario-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category2stage4 {
+		background-image: url(../images/ldpi/casa/armario-ldpi.png);
+    }
+}
+
+
+
+.category2stage5 {
+    background-image: url(../images/mdpi/casa/banqueta-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category2stage5 {
+		background-image: url(../images/hdpi/casa/banqueta-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category2stage5 {
+		background-image: url(../images/ldpi/casa/banqueta-ldpi.png);
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 3 (ropa)*/
+/*----------------------------------------------------------------------------------------*/
+.category3stage1 {
+    background-image: url(../images/mdpi/ropa/guantes-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category3stage1 {
+		background-image: url(../images/hdpi/ropa/guantes-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category3stage1 {
+		background-image: url(../images/ldpi/ropa/guantes-ldpi.png);
+    }
+}
+
+
+.category3stage2 {
+    background-image: url(../images/mdpi/ropa/gorra-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category3stage2 {
+		background-image: url(../images/hdpi/ropa/gorra-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category3stage2 {
+		background-image: url(../images/ldpi/ropa/gorra-ldpi.png);
+    }
+}
+
+
+.category3stage3 {
+    background-image: url(../images/mdpi/ropa/zapatillas-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category3stage3 {
+		background-image: url(../images/hdpi/ropa/zapatillas-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category3stage3 {
+		background-image: url(../images/ldpi/ropa/zapatillas-ldpi.png);
+    }
+}
+
+
+
+.category3stage4 {
+    background-image: url(../images/mdpi/ropa/camisa-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category3stage4 {
+		background-image: url(../images/hdpi/ropa/camisa-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category3stage4 {
+		background-image: url(../images/ldpi/ropa/camisa-ldpi.png);
+    }
+}
+
+
+
+.category3stage5 {
+    background-image: url(../images/mdpi/ropa/chaqueta-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category3stage5 {
+		background-image: url(../images/hdpi/ropa/chaqueta-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category3stage5 {
+		background-image: url(../images/ldpi/ropa/chaqueta-ldpi.png);
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 4 (alimentos)*/
+/*----------------------------------------------------------------------------------------*/
+.category4stage1 {
+    background-image: url(../images/mdpi/alimentos/anana-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category4stage1 {
+		background-image: url(../images/hdpi/alimentos/anana-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category4stage1 {
+		background-image: url(../images/ldpi/alimentos/anana-ldpi.png);
+    }
+}
+
+
+
+.category4stage2 {
+    background-image: url(../images/mdpi/alimentos/helado-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category4stage2 {
+		background-image: url(../images/hdpi/alimentos/helado-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category4stage2 {
+		background-image: url(../images/ldpi/alimentos/helado-ldpi.png);
+    }
+}
+
+
+
+.category4stage3 {
+    background-image: url(../images/mdpi/alimentos/helado-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category4stage3 {
+		background-image: url(../images/hdpi/alimentos/helado-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category4stage3 {
+		background-image: url(../images/ldpi/alimentos/helado-ldpi.png);
+    }
+}
+
+
+
+.category4stage4 {
+    background-image: url(../images/mdpi/alimentos/frutillas-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category4stage4 {
+		background-image: url(../images/hdpi/alimentos/frutillas-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category4stage4 {
+		background-image: url(../images/ldpi/alimentos/frutillas-ldpi.png);
+    }
+}
+
+
+
+.category4stage5 {
+    background-image: url(../images/mdpi/alimentos/queso-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category4stage5 {
+		background-image: url(../images/hdpi/alimentos/queso-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category4stage5 {
+		background-image: url(../images/ldpi/alimentos/queso-ldpi.png);
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 5 (gestos)*/
+/*----------------------------------------------------------------------------------------*/
+.category5stage1 {
+    background-image: url(../images/mdpi/gestos/feliz-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category5stage1 {
+		background-image: url(../images/hdpi/gestos/feliz-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category5stage1 {
+		background-image: url(../images/ldpi/gestos/feliz-ldpi.png);
+    }
+}
+
+
+
+.category5stage2 {
+    background-image: url(../images/mdpi/gestos/loco-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category5stage2 {
+		background-image: url(../images/hdpi/gestos/loco-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category5stage2 {
+		background-image: url(../images/ldpi/gestos/loco-ldpi.png);
+    }
+}
+
+
+
+.category5stage3 {
+    background-image: url(../images/mdpi/gestos/sorprendido-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category5stage3 {
+		background-image: url(../images/hdpi/gestos/sorprendido-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category5stage3 {
+		background-image: url(../images/ldpi/gestos/sorprendido-ldpi.png);
+    }
+}
+
+
+
+.category5stage4 {
+    background-image: url(../images/mdpi/gestos/ginio-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category5stage4 {
+		background-image: url(../images/hdpi/gestos/ginio-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category5stage4 {
+		background-image: url(../images/ldpi/gestos/ginio-ldpi.png);
+    }
+}
+
+
+
+.category5stage5 {
+    background-image: url(../images/mdpi/gestos/canchero-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category5stage5 {
+		background-image: url(../images/hdpi/gestos/canchero-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category5stage5 {
+		background-image: url(../images/ldpi/gestos/canchero-ldpi.png);
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 6 (colores)*/
+/*----------------------------------------------------------------------------------------*/
+.category6stage1 {
+    background-image: url(../images/mdpi/colores/amarillo-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category6stage1 {
+		background-image: url(../images/hdpi/colores/amarillo-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category6stage1 {
+		background-image: url(../images/ldpi/colores/amarillo-ldpi.png);
+    }
+}
+
+
+
+.category6stage2 {
+    background-image: url(../images/mdpi/colores/rosa-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category6stage2 {
+		background-image: url(../images/hdpi/colores/rosa-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category6stage2 {
+		background-image: url(../images/ldpi/colores/rosa-ldpi.png);
+    }
+}
+
+
+
+.category6stage3 {
+    background-image: url(../images/mdpi/colores/verde-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category6stage3 {
+		background-image: url(../images/hdpi/colores/verde-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category6stage3 {
+		background-image: url(../images/ldpi/colores/verde-ldpi.png);
+    }
+}
+
+
+
+.category6stage4 {
+    background-image: url(../images/mdpi/colores/rojo-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category6stage4 {
+		background-image: url(../images/hdpi/colores/rojo-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category6stage4 {
+		background-image: url(../images/ldpi/colores/rojo-ldpi.png);
+    }
+}
+
+
+
+.category6stage5 {
+    background-image: url(../images/mdpi/colores/violeta-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category6stage5 {
+		background-image: url(../images/hdpi/colores/violeta-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category6stage5 {
+		background-image: url(../images/ldpi/colores/violeta-ldpi.png);
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 7 (juguetes)*/
+/*----------------------------------------------------------------------------------------*/
+.category7stage1 {
+    background-image: url(../images/mdpi/juguetes/pelota-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category7stage1 {
+		background-image: url(../images/hdpi/juguetes/pelota-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category7stage1 {
+		background-image: url(../images/ldpi/juguetes/pelota-ldpi.png);
+    }
+}
+
+
+
+.category7stage2 {
+    background-image: url(../images/mdpi/juguetes/trencito-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category7stage2 {
+		background-image: url(../images/hdpi/juguetes/trencito-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category7stage2 {
+		background-image: url(../images/ldpi/juguetes/trencito-ldpi.png);
+    }
+}
+
+
+
+.category7stage3 {
+    background-image: url(../images/mdpi/juguetes/motito-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category7stage3 {
+		background-image: url(../images/hdpi/juguetes/motito-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category7stage3 {
+		background-image: url(../images/ldpi/juguetes/motito-ldpi.png);
+    }
+}
+
+
+
+.category7stage4 {
+    background-image: url(../images/mdpi/juguetes/caballito-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category7stage4 {
+		background-image: url(../images/hdpi/juguetes/caballito-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category7stage4 {
+		background-image: url(../images/ldpi/juguetes/caballito-ldpi.png);
+    }
+}
+
+
+
+.category7stage5 {
+    background-image: url(../images/mdpi/juguetes/tobogan-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category7stage5 {
+		background-image: url(../images/hdpi/juguetes/tobogan-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category7stage5 {
+		background-image: url(../images/ldpi/juguetes/tobogan-ldpi.png);
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Objects -> CATEGORY 8 (vehiculos)*/
+/*----------------------------------------------------------------------------------------*/
+.category8stage1 {
+    background-image: url(../images/mdpi/vehiculos/camion-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category8stage1 {
+		background-image: url(../images/hdpi/vehiculos/camion-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category8stage1 {
+		background-image: url(../images/ldpi/vehiculos/camion-ldpi.png);
+    }
+}
+
+
+
+.category8stage2 {
+    background-image: url(../images/mdpi/vehiculos/helicoptero-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category8stage2 {
+		background-image: url(../images/hdpi/vehiculos/helicoptero-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category8stage2 {
+		background-image: url(../images/ldpi/vehiculos/helicoptero-ldpi.png);
+    }
+}
+
+
+
+.category8stage3 {
+    background-image: url(../images/mdpi/vehiculos/palamecanica-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category8stage3 {
+		background-image: url(../images/hdpi/vehiculos/palamecanica-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category8stage3 {
+		background-image: url(../images/ldpi/vehiculos/palamecanica-ldpi.png);
+    }
+}
+
+
+
+.category8stage4 {
+    background-image: url(../images/mdpi/vehiculos/micro-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category8stage4 {
+		background-image: url(../images/hdpi/vehiculos/micro-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category8stage4 {
+		background-image: url(../images/ldpi/vehiculos/micro-ldpi.png);
+    }
+}
+
+
+
+.category8stage5 {
+    background-image: url(../images/mdpi/vehiculos/moto-mdpi.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .category8stage5 {
+		background-image: url(../images/hdpi/vehiculos/moto-hdpi.png);
+
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+    .category8stage5 {
+		background-image: url(../images/ldpi/vehiculos/moto-ldpi.png);
+    }
+}
+/*----------------------------------------------------------------------------------------*/

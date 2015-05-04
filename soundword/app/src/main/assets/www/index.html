@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html> 	
+<head> 
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	<script src="js/purl.js"></script>	
+	<script src="js/cordova-2.2.0.js"></script>
+	<script src="js/Palabras.js"></script>
+	<script src="js/Nivel.js"></script>
+	<script src="js/OpcionJuego.js"></script>
+	<script src="js/wordGameCategories.js"></script>
+	<script src="js/wordGame.js"></script>		
+	<style>
+	.shakeimage{
+	position:relative
+	}
+	
+	.ui-header .ui-title {
+    	margin-right: 10%;
+   		margin-left: 10%;
+	}
+	</style>
+	
+</head> 
+
+<body>
+
+	<div data-role='page' id='select_category'>
+		<script type="text/javascript">
+			$('#select_category').on('pageinit', createWords);
+		</script>
+		<div data-role='header'>
+			<h1>PALABRAS CLARAS</h1>
+			<h2> DISCRIMINACI&Oacute;N DE PALABRAS</h2>
+			<a href='#help' data-role="button" data-inline="true">?</a>
+		</div>
+		<div data-role='content'>
+			<a href='#' data-role="button" data-inline="true" onclick="goToSelectLevel('aislada')">PALABRAS AISLADAS</a>
+			<a href='#' data-role="button" data-inline="true" onclick="goToSelectLevel('contexto')">PALABRAS EN CONTEXTO</a>
+            <a href='#fin_juego' data-role="button" data-inline="true">VER RESULTADOS</a>
+		</div>
+		
+	</div>
+	<div data-role='page' id='select_type_level'>
+
+	    <div data-role='header'> 
+		</div>
+		<div data-role='content'>
+			<h2> SUSTANTIVOS </h2>
+			<div id='sustantivo'>
+					
+			</div>
+			
+			<h2> VERBOS </h2>
+			<div id='verbo'>
+						
+			</div>
+		</div>
+				
+	</div>
+	
+	<div data-role='page' id='juego'>
+		<div data-role='header'> 
+		</div>
+		
+		<div data-role='content' id='cont_juego'>
+			<p>HAGA CLIC EN EL BON&Oacute;N 'EJECUTAR AUDIO' PARA ESCUCHAR EL SONIDO, Y SELECCIONE LA IMAGEN CORRECTA. <a href='#' data-role="button" data-inline="true" onclick="escucharConsigna()" id='boton_enunciado'>ESCUCHAR CONSIGNA</a>  </p>
+			<a href='#ejemplo' data-role="button" data-inline="true" id='boton_video_ejemplo'>VER EJEMPLO</a>
+			<a href='#' data-role="button" data-inline="true" id='boton_sonido'>EJECUTAR AUDIO</a>
+            <p><strong id='respuesta'></strong></p>
+			<div id='imagenes_juego'>
+			
+			</div>
+            <div id="progressbar"></div>
+		</div>
+	</div>
+	
+	<div data-role='page' id='fin_juego'>
+		<div data-role='header'> 
+			<h1> EJERCICIO TERMINADO </h1>
+		</div>
+		<h3 id='correctas'> Respuestas Correctas: 0</h3>
+		<h3 id='incorrectas'> Respuestas Incorrectas: 0</h3>
+		<div data-role="collapsible">
+   			<h3>Detalle</h3>
+   			<p id='inc_formal'>Respuestas Incorrectas por Distractores Formales: </p>
+   			<p id='inc_semantico'>Respuestas Incorrectas por Distractores Semanticos: </p>
+   			<p id='inc_no_relacionado'>Respuestas Incorrectas por Distractores no Relacionados: </p>
+		</div>
+	</div>
+	
+	<div data-role='page' id='ejemplo'>
+		<div data-role='header'> 
+			<h1> Ejemplo </h1>
+		</div>
+		<div data-role='content'>
+			<p> Ac&aacute; ir&iacute;a el video </p>
+		</div>
+	</div>
+	
+		<div data-role='page' id='help'>
+		<div data-role='header'> 
+			<h1> Ayuda </h1>
+		</div>
+		<div data-role='content'>
+			
+			<p> Ac&aacute; ir&iacute;a el texto de ayuda </p>
+		</div>
+	</div>
+</body>
+</html>

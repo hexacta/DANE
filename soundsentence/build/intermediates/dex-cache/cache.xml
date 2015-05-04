@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\mbuchwald\Documents\DesarrolloMobile\soundsentence\app\libs\cordova-2.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="642eb2c04214affeddec87c7c9e840d5ddf864be">
+        <dex dex="C:\Users\mbuchwald\Documents\DesarrolloMobile\soundsentence\app\build\intermediates\pre-dexed\debug\cordova-2.2.0-648fc15d41d95a2f5e355c0eda4211d0766c9547.jar" />
+    </item>
+    <item
+        jar="C:\Users\mbuchwald\Documents\Android SDK\adt-bundle-windows-x86_64-20140321\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\mbuchwald\Documents\DesarrolloMobile\soundsentence\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-178922c63106a8d3f923c4cf2a271b8cd0b18b79.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,87 @@
+var observador = null;
+
+
+function OpcionJuego(imagen,  tipo){
+	this.imagen = imagen;
+	this.tipo = tipo;
+	this.es_correcta = this.tipo == CORRECTA;
+}
+
+OpcionJuego.prototype.mostrar = function(avisar){
+	observador = avisar;
+	
+	var creadorImg = "<img src='"+this.imagen+"' style=\"height:auto; width:auto; max-width:300px; max-height:300px;\" onclick=\"";
+	if (this.es_correcta){
+		creadorImg += "opcionCorrecta()\"/>";
+	}else{
+		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/>";
+	}
+	
+	var img = $(creadorImg );
+	$("#imagenes_juego").append(img);
+}
+
+OpcionJuego.prototype.esCorrecta = function (){
+	return this.es_correcta;
+}
+
+opcionCorrecta = function(){
+	observador.seleccionado(true, CORRECTA);
+}
+
+opcionIncorrecta = function(tipo){
+	observador.seleccionado(false, tipo);
+}
+
+
+/*
+Shake image script (onMouseover)- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+//configure shake degree (where larger # equals greater shake)
+const REPETICIONES = 40;
+
+var rector=3;
+
+///////DONE EDITTING///////////
+
+var turno = 1;
+
+var rep = 0;
+
+function init(which){
+	shake=which;
+	shake.style.left=0;
+	shake.style.top=0;
+}
+
+function rattleimage(primero){
+	if (primero)
+		rep = 0;
+	
+	if ((!document.all&&!document.getElementById) || rep == REPETICIONES)
+		return;
+ 	
+	switch (turno){
+	case 1:
+		shake.style.top=parseInt(shake.style.top)+rector+"px";
+		break;
+	case 2:
+		shake.style.left=parseInt(shake.style.left)+rector+"px";
+		break;
+	case 3:
+		shake.style.top=parseInt(shake.style.top)-rector+"px";
+		break;
+	case 4:
+		shake.style.left=parseInt(shake.style.left)-rector+"px";
+		break;
+	}
+	
+	turno = (turno % 4) + 1;
+	
+	rep++;
+	setTimeout("rattleimage(false)",10);
+
+}
