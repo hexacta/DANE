@@ -1,0 +1,79 @@
+.header { 
+	background: #fff;
+	display: table;
+	min-height: 285px;
+	margin: 0 0 70px;
+	width: 100%;
+}
+
+.brand {
+	margin: 0 auto;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+
+	.logo {
+		@include clearfix();
+		margin: 0 auto;
+		width: 615px;
+		
+		img {
+			float: left;
+			margin-right: 30px;
+		}
+
+		h1 {
+			color: #6a899e;
+			float: left;
+			font: 53px/53px "Lobster"; 
+			padding: 30px 0 0;
+			text-align: left;
+			width: 375px;
+
+			span {
+				color: #404040;
+				display: block;
+				font: 25px/25px "segoeui";
+				margin-top: 20px;
+
+				&.color-brand {
+					color: $color-brand;
+					font: 53px/53px "Lobster";
+					display: inline;
+					margin: 0;
+				} 
+			}
+		}
+	}
+}
+
+.logo.navBar h1{
+		font: 30px/30px "Lobster"; 
+		padding: 25px 0 0;
+		
+		.color-brand{
+		font: 30px/30px "Lobster"!important;
+	}
+}
+
+	
+.choose-words {
+	text-align: center;
+}
+
+.menu {
+	display: inline-block;
+		
+	li {
+		display: inline;
+
+		&:first-child {
+			margin-right: 45px;
+		}
+
+		&.help {
+			display: block;
+			margin-top: 40px;
+		}
+	}
+}

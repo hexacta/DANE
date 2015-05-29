@@ -1,0 +1,735 @@
+/* USAGE **********************************
+@include keyframes(slide-down) {
+0% { opacity: 1; }
+90% { opacity: 0; }
+}
+
+.element {
+width: 100px;
+height: 100px;
+background: black;
+@include animation('slide-down 5s 3');
+}
+*******************************************/
+@font-face {
+  font-family: "Lobster";
+  src: url("fonts/Lobster.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'segoeui';
+  src: url("fonts/segoeui.eot");
+  src: url("fonts/segoeui.eot") format("embedded-opentype"), url("fonts/segoeui.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'seguisb';
+  src: url("fonts/seguisb.eot");
+  src: url("fonts/seguisb.eot") format("embedded-opentype"), url("fonts/seguisb.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 5, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 3, ../scss/medium/components/_screens.scss */
+  header .brand.only .logo {
+    width: 230px;
+  }
+
+  /* line 9, ../scss/medium/components/_screens.scss */
+  .content-box {
+    background: #fff;
+    margin: 0 0 15px;
+    min-height: 340px;
+    padding: 35px 30px 25px;
+    position: relative;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  /* line 17, ../scss/medium/components/_screens.scss */
+  .content-box h2 {
+    color: #fe8953;
+    font: 30px/30px "segoeui";
+    margin: 0 0 10px;
+  }
+  /* line 22, ../scss/medium/components/_screens.scss */
+  .content-box h2.title-end {
+    margin: 0 0 20px;
+  }
+  /* line 27, ../scss/medium/components/_screens.scss */
+  .content-box .subtitle {
+    color: #577c96;
+    font: 14px/14px "segoeui";
+    margin: 0 0 25px;
+  }
+  /* line 32, ../scss/medium/components/_screens.scss */
+  .content-box .subtitle a {
+    color: #6a88a0;
+    font-family: 'seguisb';
+  }
+  /* line 36, ../scss/medium/components/_screens.scss */
+  .content-box .subtitle a:hover, .content-box .subtitle a:active {
+    color: #7693ab;
+  }
+  /* line 43, ../scss/medium/components/_screens.scss */
+  .content-box .see-more {
+    color: #577c96;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+  /* line 49, ../scss/medium/components/_screens.scss */
+  .content-box .see-more a {
+    color: #577c96;
+    font: 18px/18px "segoeui";
+  }
+  /* line 55, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels {
+    padding: 25px 0 0;
+    border-top: solid 1px #f7f7f7;
+  }
+  /* line 59, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels {
+    margin: 20px 0 0;
+    *zoom: 1;
+  }
+  /* line 96, ../scss/_mixins.scss */
+  .content-box .content-levels .levels:before, .content-box .content-levels .levels:after {
+    content: " ";
+    display: table;
+  }
+  /* line 102, ../scss/_mixins.scss */
+  .content-box .content-levels .levels:after {
+    clear: both;
+  }
+  /* line 63, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels:first-child {
+    margin: 0;
+  }
+  /* line 67, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels .word {
+    float: left;
+    min-width: 290px;
+    margin-right: 25px;
+  }
+  /* line 72, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels .word h3 {
+    font: 24px/24px "segoeui";
+    margin: 0 0 10px;
+  }
+  /* line 77, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels .word p {
+    font: 14px/14px "segoeui";
+  }
+  /* line 82, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels ul {
+    float: left;
+    margin-left: -10px;
+    width: 485px;
+  }
+  /* line 87, ../scss/medium/components/_screens.scss */
+  .content-box .content-levels .levels ul li {
+    display: inline-block;
+    margin: 0 0 10px 10px;
+  }
+  /* line 95, ../scss/medium/components/_screens.scss */
+  .content-box .choose-images {
+    *zoom: 1;
+  }
+  /* line 96, ../scss/_mixins.scss */
+  .content-box .choose-images:before, .content-box .choose-images:after {
+    content: " ";
+    display: table;
+  }
+  /* line 102, ../scss/_mixins.scss */
+  .content-box .choose-images:after {
+    clear: both;
+  }
+  /* line 98, ../scss/medium/components/_screens.scss */
+  .content-box .choose-images .item {
+    float: left;
+    margin-left: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  /* line 103, ../scss/medium/components/_screens.scss */
+  .content-box .choose-images .item:first-child {
+    margin: 0;
+  }
+  /* line 108, ../scss/medium/components/_screens.scss */
+  .content-box .choose-images .audio {
+    background: #ff7841;
+  }
+  /* line 111, ../scss/medium/components/_screens.scss */
+  .content-box .choose-images .audio a {
+    color: #fff;
+    display: block;
+    font: 23px/23px "segoeui";
+    padding: 40px 25px;
+    text-align: center;
+    height: 179px;
+    width: 130px;
+  }
+  /* line 120, ../scss/medium/components/_screens.scss */
+  .content-box .choose-images .audio a .icon-audio {
+    position: relative;
+    top: inherit;
+    display: block;
+    font-size: 50px;
+    margin-top: 10px;
+  }
+
+  /* line 132, ../scss/medium/components/_screens.scss */
+  .content-modal {
+    background: #fff;
+    padding: 40px;
+    width: 473px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  /* line 138, ../scss/medium/components/_screens.scss */
+  .content-modal .modal-option-result {
+    border-bottom: solid 1px #dbdbdb;
+    padding: 0 0 30px;
+    margin: 0 0 30px;
+    *zoom: 1;
+  }
+  /* line 96, ../scss/_mixins.scss */
+  .content-modal .modal-option-result:before, .content-modal .modal-option-result:after {
+    content: " ";
+    display: table;
+  }
+  /* line 102, ../scss/_mixins.scss */
+  .content-modal .modal-option-result:after {
+    clear: both;
+  }
+  /* line 144, ../scss/medium/components/_screens.scss */
+  .content-modal .modal-option-result img,
+  .content-modal .modal-option-result .result {
+    float: left;
+  }
+  /* line 149, ../scss/medium/components/_screens.scss */
+  .content-modal .modal-option-result img {
+    margin-right: 25px;
+  }
+  /* line 153, ../scss/medium/components/_screens.scss */
+  .content-modal .modal-option-result .result {
+    padding: 10px 0 0;
+  }
+  /* line 156, ../scss/medium/components/_screens.scss */
+  .content-modal .modal-option-result .result p {
+    color: #46b39c;
+    font: 25px/25px "segoeui";
+    margin: 0 0 15px;
+  }
+  /* line 161, ../scss/medium/components/_screens.scss */
+  .content-modal .modal-option-result .result span {
+    color: #787878;
+    font: 40px/40px "segoeui";
+  }
+  /* line 170, ../scss/medium/components/_screens.scss */
+  .content-modal .pager li {
+    display: inline;
+    *zoom: 1;
+  }
+  /* line 96, ../scss/_mixins.scss */
+  .content-modal .pager li:before, .content-modal .pager li:after {
+    content: " ";
+    display: table;
+  }
+  /* line 102, ../scss/_mixins.scss */
+  .content-modal .pager li:after {
+    clear: both;
+  }
+  /* line 176, ../scss/medium/components/_screens.scss */
+  .content-modal .pager li.next a {
+    float: right;
+  }
+  /* line 181, ../scss/medium/components/_screens.scss */
+  .content-modal .pager li a {
+    color: #637987;
+    font: 16px/16px "segoeui";
+  }
+
+  /* line 189, ../scss/medium/components/_screens.scss */
+  .table {
+    border-top: solid 1px #f7f7f7;
+    width: 100%;
+  }
+  /* line 195, ../scss/medium/components/_screens.scss */
+  .table colgroup .col1 {
+    width: 5%;
+  }
+  /* line 198, ../scss/medium/components/_screens.scss */
+  .table colgroup .col2 {
+    width: 30%;
+  }
+  /* line 201, ../scss/medium/components/_screens.scss */
+  .table colgroup .col3 {
+    width: 70%;
+  }
+  /* line 208, ../scss/medium/components/_screens.scss */
+  .table tr td {
+    color: #6c6c6c;
+    padding: 20px;
+    font: 30px/30px "segoeui";
+  }
+  /* line 213, ../scss/medium/components/_screens.scss */
+  .table tr td:first-child {
+    padding: 14px 0 20px;
+  }
+  /* line 217, ../scss/medium/components/_screens.scss */
+  .table tr td.right {
+    color: #46b39c;
+    font: 35px/35px "segoeui";
+  }
+  /* line 222, ../scss/medium/components/_screens.scss */
+  .table tr td.wrong {
+    color: #df5c4a;
+    font: 35px/35px "segoeui";
+  }
+  /* line 227, ../scss/medium/components/_screens.scss */
+  .table tr td.result {
+    color: #5f798a;
+    font: 35px/35px "segoeui";
+  }
+  /* line 233, ../scss/medium/components/_screens.scss */
+  .table tr.total {
+    border-top: solid 1px #f7f7f7;
+  }
+  /* line 238, ../scss/medium/components/_screens.scss */
+  .table tr:first-child td {
+    padding-top: 30px;
+  }
+
+  /* line 245, ../scss/medium/components/_screens.scss */
+  .end-detail {
+    border-top: solid 1px #f7f7f7;
+  }
+  /* line 248, ../scss/medium/components/_screens.scss */
+  .end-detail li {
+    *zoom: 1;
+    color: #6f6f6f;
+    font: 25px/25px "segoeui";
+    margin: 15px 0 0;
+    max-width: 410px;
+  }
+  /* line 96, ../scss/_mixins.scss */
+  .end-detail li:before, .end-detail li:after {
+    content: " ";
+    display: table;
+  }
+  /* line 102, ../scss/_mixins.scss */
+  .end-detail li:after {
+    clear: both;
+  }
+  /* line 257, ../scss/medium/components/_screens.scss */
+  .end-detail li:first-child span {
+    float: none;
+  }
+  /* line 262, ../scss/medium/components/_screens.scss */
+  .end-detail li b {
+    font-family: 'seguisb';
+  }
+  /* line 266, ../scss/medium/components/_screens.scss */
+  .end-detail li span {
+    float: right;
+  }
+  /* line 269, ../scss/medium/components/_screens.scss */
+  .end-detail li span.result {
+    color: #ff8853;
+    font: 30px/30px "segoeui";
+  }
+  /* line 274, ../scss/medium/components/_screens.scss */
+  .end-detail li span.distractor {
+    color: #e05c47;
+  }
+
+  /* line 1, ../scss/medium/components/_intro.scss */
+  .header {
+    background: #fff;
+    display: table;
+    min-height: 285px;
+    margin: 0 0 70px;
+    width: 100%;
+  }
+
+  /* line 9, ../scss/medium/components/_intro.scss */
+  .brand {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  /* line 15, ../scss/medium/components/_intro.scss */
+  .brand .logo {
+    *zoom: 1;
+    margin: 0 auto;
+    width: 615px;
+  }
+  /* line 96, ../scss/_mixins.scss */
+  .brand .logo:before, .brand .logo:after {
+    content: " ";
+    display: table;
+  }
+  /* line 102, ../scss/_mixins.scss */
+  .brand .logo:after {
+    clear: both;
+  }
+  /* line 20, ../scss/medium/components/_intro.scss */
+  .brand .logo img {
+    float: left;
+    margin-right: 30px;
+  }
+  /* line 25, ../scss/medium/components/_intro.scss */
+  .brand .logo h1 {
+    color: #6a899e;
+    float: left;
+    font: 53px/53px "Lobster";
+    padding: 30px 0 0;
+    text-align: left;
+    width: 375px;
+  }
+  /* line 33, ../scss/medium/components/_intro.scss */
+  .brand .logo h1 span {
+    color: #404040;
+    display: block;
+    font: 25px/25px "segoeui";
+    margin-top: 20px;
+  }
+  /* line 39, ../scss/medium/components/_intro.scss */
+  .brand .logo h1 span.color-brand {
+    color: #fe8a51;
+    font: 53px/53px "Lobster";
+    display: inline;
+    margin: 0;
+  }
+
+  /* line 50, ../scss/medium/components/_intro.scss */
+  .logo.navBar h1 {
+    font: 30px/30px "Lobster";
+    padding: 25px 0 0;
+  }
+  /* line 54, ../scss/medium/components/_intro.scss */
+  .logo.navBar h1 .color-brand {
+    font: 30px/30px "Lobster" !important;
+  }
+
+  /* line 60, ../scss/medium/components/_intro.scss */
+  .choose-words {
+    text-align: center;
+  }
+
+  /* line 64, ../scss/medium/components/_intro.scss */
+  .menu {
+    display: inline-block;
+  }
+  /* line 67, ../scss/medium/components/_intro.scss */
+  .menu li {
+    display: inline;
+  }
+  /* line 70, ../scss/medium/components/_intro.scss */
+  .menu li:first-child {
+    margin-right: 45px;
+  }
+  /* line 74, ../scss/medium/components/_intro.scss */
+  .menu li.help {
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* line 6, ../scss/medium/_base.scss */
+  html {
+    box-sizing: border-box;
+  }
+
+  /* line 10, ../scss/medium/_base.scss */
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* line 14, ../scss/medium/_base.scss */
+  body {
+    background: #617888;
+  }
+
+  /* line 18, ../scss/medium/_base.scss */
+  header {
+    background: #fff;
+    display: table;
+    min-height: 75px;
+    margin: 0 0 25px;
+    width: 100%;
+  }
+
+  /* line 26, ../scss/medium/_base.scss */
+  h1 {
+    font: 25px/25px "segoeui";
+    margin: 0 0 20px;
+  }
+
+  /* line 31, ../scss/medium/_base.scss */
+  p {
+    color: #6f6f6f;
+    font: 16px/22px "Gotham book";
+    margin: 0;
+  }
+
+  /* line 37, ../scss/medium/_base.scss */
+  a {
+    text-decoration: none;
+  }
+  /* line 40, ../scss/medium/_base.scss */
+  a:hover, a:active {
+    -moz-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+
+  /* line 46, ../scss/medium/_base.scss */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* line 51, ../scss/medium/_base.scss */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 57, ../scss/medium/_base.scss */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /*--- buttons
+  ---------------------------*/
+  /* line 64, ../scss/medium/_base.scss */
+  .bt {
+    color: #fff;
+    display: inline-block;
+    font: 25px/25px "segoeui";
+    padding: 25px 55px;
+    text-align: center;
+    min-width: 200px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  /* line 73, ../scss/medium/_base.scss */
+  .bt.bt-small {
+    background: #ff7841;
+    font: 20px/20px "segoeui";
+    padding: 15px 20px;
+    min-width: 107px;
+  }
+  /* line 79, ../scss/medium/_base.scss */
+  .bt.bt-small:hover, .bt.bt-small:active {
+    background: #fd8757;
+  }
+  /* line 84, ../scss/medium/_base.scss */
+  .bt.bt-small.default {
+    background: #e05b4a;
+  }
+  /* line 87, ../scss/medium/_base.scss */
+  .bt.bt-small.default:hover, .bt.bt-small.default:active {
+    background: #e96757;
+  }
+  /* line 94, ../scss/medium/_base.scss */
+  .bt.principal-button {
+    background: #ff9c41;
+  }
+  /* line 97, ../scss/medium/_base.scss */
+  .bt.principal-button:hover, .bt.principal-button:active {
+    background: #ffa24c;
+  }
+  /* line 103, ../scss/medium/_base.scss */
+  .bt.general-button {
+    background: #fe8954;
+  }
+  /* line 106, ../scss/medium/_base.scss */
+  .bt.general-button:hover, .bt.general-button:active {
+    background: #fc8f5e;
+  }
+
+  /* line 113, ../scss/medium/_base.scss */
+  .help {
+    display: block;
+    text-align: right;
+  }
+  /* line 117, ../scss/medium/_base.scss */
+  .help a {
+    color: #fff;
+    font: 16px/16px "segoeui";
+    text-decoration: none;
+  }
+  /* line 122, ../scss/medium/_base.scss */
+  .help a:hover, .help a:active {
+    color: #e4e4eb;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+
+  /* line 131, ../scss/medium/_base.scss */
+  li.help a {
+    font: 20px/20px "segoeui";
+  }
+
+  /*--- Icons
+  ---------------------------*/
+  /* line 139, ../scss/medium/_base.scss */
+  .icon-help {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  /* line 143, ../scss/medium/_base.scss */
+  p .icon-help {
+    font-size: 22px;
+    margin-left: 5px;
+  }
+
+  /* line 147, ../scss/medium/_base.scss */
+  .icon-back {
+    font-size: 22px;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+  }
+
+  /* line 153, ../scss/medium/_base.scss */
+  .icon-next {
+    font-size: 22px;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+  }
+
+  /* line 159, ../scss/medium/_base.scss */
+  .icon-video {
+    font-size: 22px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+  /* line 165, ../scss/medium/_base.scss */
+  .icon-audio {
+    font-size: 22px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+  /* line 171, ../scss/medium/_base.scss */
+  .icon-less {
+    font-size: 22px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+  /* line 177, ../scss/medium/_base.scss */
+  .icon-more {
+    font-size: 22px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+  /*--- breadcrumbs
+  ---------------------------*/
+  /* line 186, ../scss/medium/_base.scss */
+  .breadcrumb {
+    margin: 0 0 25px;
+  }
+  /* line 190, ../scss/medium/_base.scss */
+  .breadcrumb li a {
+    color: #fff;
+    font: 16px/22px "segoeui";
+    text-decoration: none;
+  }
+  /* line 195, ../scss/medium/_base.scss */
+  .breadcrumb li a:hover, .breadcrumb li a:active {
+    color: #e4e4eb;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+}

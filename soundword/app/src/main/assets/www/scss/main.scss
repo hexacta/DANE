@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts/fuentes';
+
+@import "compass/reset";
+@import "compass/css3";
+
+@media screen and (min-width: $medium-breakpoint) {
+  @import 'medium/base';
+}

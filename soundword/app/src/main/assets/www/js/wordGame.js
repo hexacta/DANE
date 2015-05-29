@@ -62,9 +62,11 @@ function mostrarBotones(palabras, tipo, ais_ctx){
 	//Se agregan los botones a la seccion, para elegir entre los distintos niveles de sustantivos/verbos.
 	var cant_botones = palabras.cantidadNiveles();
 	for (var i = 0; i < cant_botones ;i++){
-		var boton = $("<a href='#' data-role='button' data-inline='true' onclick=\"iniciarJuego('"+tipo+"','"+ais_ctx+"',"+i+")\">EJERCICIO "+(i+1)+"</a>");
+		//var boton = $("<a href='#' data-role='button' data-inline='true' onclick=\"iniciarJuego('"+tipo+"','"+ais_ctx+"',"+i+")\">EJERCICIO "+(i+1)+"</a>");
+		var boton = $("<li><a class='bt bt-small default' href='#' onclick=\"iniciarJuego('"+tipo+"','"+ais_ctx+"',"+i+")\">EJERCICIO " + (i+1) + "</a></li>");
+
 		$("#"+tipo).append(boton);
-		boton.button();
+		//boton.button();
 	}
 }
 
@@ -128,11 +130,16 @@ function llamarCambio(){
 		}
 		var incorrectas = total_elecciones[DISTRACTOR_FORMAL] + total_elecciones[DISTRACTOR_SEMANTICO] + total_elecciones[DISTRACTOR_NO_RELACIONADO];
 		var total = total_elecciones[CORRECTA] + incorrectas;
-		$('#correctas').text('RESPUESTAS CORRECTAS:' + total_elecciones[CORRECTA] + '/' + total + ' (' + parseFloat((total_elecciones[CORRECTA] * 100 / total).toPrecision(2)) + '%)');
-		$('#incorrectas').text('RESPUESTAS INCORRECTAS: '+ incorrectas  + '/' + total + ' (' +  parseFloat((incorrectas * 100 / total).toPrecision(2)) + '%)');
-		$('#inc_formal').text('RESPUESTAS INCORRECTAS POR DISTRACTORES FORMALES: '+  total_elecciones[DISTRACTOR_FORMAL]  + '/' + total + ' (' + parseFloat((total_elecciones[DISTRACTOR_FORMAL] * 100 / total).toPrecision(2)) + '%)');
-		$('#inc_semantico').text('RESPUESTAS INCORRECTAS POR DISTRACTORES SEMANTICOS: '+  total_elecciones[DISTRACTOR_SEMANTICO]  + '/' + total + '(' + parseFloat((total_elecciones[DISTRACTOR_SEMANTICO] * 100 / total).toPrecision(2)) + '%)');
-		$('#inc_no_relacionado').text('RESPUESTAS INCORRECTAS POR DISTRACTORES NO RELACIONADOS: '+  total_elecciones[DISTRACTOR_NO_RELACIONADO]  + '/' + total + ' (' + parseFloat((total_elecciones[DISTRACTOR_NO_RELACIONADO] * 100 / total).toPrecision(2)) + '%)');
+		$('#correctas').empty();
+		$('#incorrectas').empty();
+		$('#inc_formal').empty();
+		$('#inc_semantico').empty();
+		$('#inc_no_relacionado').empty();
+		$('#correctas').append("<td><img src='images/check1.png' alt='check'/></td><td>RESPUESTAS CORRECTAS<td><td class='right'>" + total_elecciones[CORRECTA] + "/" + total + " (" + parseFloat((total_elecciones[CORRECTA] * 100 / total).toPrecision(2)) + "%)</td>");
+		$('#incorrectas').append("<td><img src='images/check2.png' alt='check'/></td><td>RESPUESTAS INCORRECTAS<td><td class='wrong'>" +incorrectas + "/" + total + " (" + parseFloat((incorrectas * 100 / total).toPrecision(2)) + "%)</td>");
+		$('#inc_formal').append("<td>DISTRACTORES <b>FORMALES</b></td><td class='wrong'><span class='distractor result'>"+  total_elecciones[DISTRACTOR_FORMAL]  + "/" + total + " (" + parseFloat((total_elecciones[DISTRACTOR_FORMAL] * 100 / total).toPrecision(2)) + "%)</span></td>");
+		$('#inc_semantico').append("<td>DISTRACTORES <b>SEM&Aacute;NTICOS</b></td><td class='wrong'><span class='distractor result'>"+  total_elecciones[DISTRACTOR_SEMANTICO]  + "/" + total + "(" + parseFloat((total_elecciones[DISTRACTOR_SEMANTICO] * 100 / total).toPrecision(2)) + "%)</span></td>");
+		$('#inc_no_relacionado').append("<td>DISTRACTORES <b>NO RELACIONADOS</b></td><td class='wrong'><span class='distractor result'>"+  total_elecciones[DISTRACTOR_NO_RELACIONADO]  + "/" + total + " (" + parseFloat((total_elecciones[DISTRACTOR_NO_RELACIONADO] * 100 / total).toPrecision(2)) + "%)</span></td>");
 		$.mobile.changePage('#select_category');
 	}
 }
@@ -142,11 +149,13 @@ function ejecutarAudio(audio){
 }
 
 function permitirCambio(texto, sonidoCorrecto){
-	$('#respuesta').text(texto);
+	var modal = "<div class='modal'><div class='content-modal'><div class='modal-option-result'><img src='images/check.png' alt='resultado correcto' /><div class='result'><p>Respuesta correcta</p><span>" + texto + "</span></div></div></div></div>";
+	$("#modalcorrect").append(modal);
+
 	ejecutarAudio(sonidoCorrecto);
 	setTimeout(function(){
 	    llamarCambio();
-	    $('#respuesta').text('');
+	    $("#modalcorrect").empty();
     }, timeout_change);
 }
 
