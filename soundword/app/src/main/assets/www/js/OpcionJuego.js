@@ -10,11 +10,11 @@ function OpcionJuego(imagen,  tipo){
 OpcionJuego.prototype.mostrar = function(avisar){
 	observador = avisar;
 
-	var creadorImg = "<div class='item'><img src='"+this.imagen+"' style=\"height:auto; width:auto; max-width:250px; max-height:250px;\" onclick=\"";
+	var creadorImg = "<div class='item'><div class='content-image'><img src='"+this.imagen+"' style=\"max-height:260px;\" onclick=\"";
 	if (this.es_correcta){
-		creadorImg += "opcionCorrecta()\"/></div>";
+		creadorImg += "opcionCorrecta()\"/></div></div>";
 	}else{
-		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/></div>";
+		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/></div></div>";
 	}
 	
 	var img = $(creadorImg );

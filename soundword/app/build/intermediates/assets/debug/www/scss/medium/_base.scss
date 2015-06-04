@@ -1,0 +1,202 @@
+// Base styles
+// Component Imports
+@import 'components/screens';
+@import 'components/intro';
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background: $bg-color;
+}
+
+header {
+	background: #fff;
+	display: table;
+	min-height: 75px;
+	margin: 0 0 25px;
+	width: 100%;
+}
+
+h1 {
+	font: 25px/25px "segoeui";
+	margin: 0 0 20px;
+}
+
+p {
+	color: #6f6f6f;
+	font: 16px/22px "Gotham book";
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		@include transition(background 0.3s ease);
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 860px;
+	margin: 0 auto;
+}
+
+/*--- buttons
+---------------------------*/
+.bt {
+	color: $bt-color;
+	display: inline-block;
+	font: 25px/25px "segoeui";
+	padding: 25px 55px;
+	text-align: center;
+	min-width: 200px;
+	@include border-radius(4px);
+
+	&.bt-small {
+		background: #ff7841;
+		font: 20px/20px "segoeui";
+		padding: 15px 20px;
+		min-width: 107px;
+
+		&:hover,
+		&:active {
+			background: $bt-small-light;
+		}
+
+		&.default {
+			background: $bt-small-default;
+
+			&:hover,
+			&:active {
+				background: $bt-small-default-light;
+			}
+		}
+	}
+
+	&.principal-button { 
+		background: $principal-bt;
+			
+		&:hover,
+		&:active {
+			background: $principal-bt-ligth;
+		}
+	}
+
+	&.general-button { 
+		background: $general-bt;
+
+		&:hover,
+		&:active {
+			background: $general-bt-ligth;
+		}
+	}	
+}
+
+.help {
+	display: block;
+	text-align: right;
+
+	a {
+		color: #fff;
+		font: 16px/16px "segoeui";
+		text-decoration: none;
+
+		&:hover,
+		&:active {
+			color: #e4e4eb;
+			@include transition(color 0.3s);
+		}
+	}
+}
+
+li.help {
+	a {
+		font: 20px/20px "segoeui";
+	}
+}
+
+/*--- Icons
+---------------------------*/
+
+.icon-help {
+	font-size: 25px;
+	margin-left: 10px;
+}
+p .icon-help {
+	font-size: 22px;
+	margin-left: 5px;
+}
+.icon-back {
+	font-size: 22px;
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.icon-next {
+	font-size: 22px;
+	margin-left: 5px;
+	position: relative;
+	top: 3px;
+}
+.icon-video {
+	font-size: 22px;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+.icon-audio {
+	font-size: 22px;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+.icon-less {
+	font-size: 22px;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+.icon-more {
+	font-size: 22px;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+/*--- breadcrumbs
+---------------------------*/
+.breadcrumb {
+	margin: 0 0 25px;
+
+	li {
+		a {
+			color: #fff;
+			font: 16px/22px "segoeui";
+			text-decoration: none;
+
+			&:hover,
+			&:active {
+				color: #e4e4eb;
+				@include transition(color 0.3s);
+			}
+		}
+	}
+}

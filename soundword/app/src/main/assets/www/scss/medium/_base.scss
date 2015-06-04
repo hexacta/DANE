@@ -11,8 +11,11 @@ html {
   box-sizing: inherit;
 }
 
-body {
-	background: $bg-color;
+body,
+.ui-body-c, 
+.ui-overlay-c {
+	background: $bg-color; 
+	text-shadow: none;
 }
 
 header {
@@ -54,31 +57,59 @@ ul {
 	padding: 0;
 }
 
-.container {
-	max-width: 860px;
-	margin: 0 auto;
+strong {
+	font-family: "seguisb";
 }
 
+.container {
+	max-width: 740px;
+	margin: 0 auto;
+
+	@media (min-width: $medium-breakpoint) and (orientation: landscape) { width: 860px }
+
+}
+.ui-content {
+	padding: 0;
+}
+.ui-bar-a {
+	border: 0;
+}
 /*--- buttons
 ---------------------------*/
-.bt {
+.ui-body-c  {
+	
+	.ui-link {
+		display: inline-block;
+		
+		&:visited,
+		&:hover,
+		&:active {
+			color: #e4e4eb;
+		}
+	}
+}
+
+.bt { 
 	color: $bt-color;
 	display: inline-block;
-	font: 25px/25px "segoeui";
+	font: 23px/23px "segoeui";
+	font-weight: normal;
 	padding: 25px 55px;
 	text-align: center;
+	text-shadow: none;
 	min-width: 200px;
 	@include border-radius(4px);
 
 	&.bt-small {
 		background: #ff7841;
-		font: 20px/20px "segoeui";
+		font: 16px/16px "segoeui";
 		padding: 15px 20px;
 		min-width: 107px;
 
 		&:hover,
 		&:active {
 			background: $bt-small-light;
+			color: #fff;
 		}
 
 		&.default {
@@ -87,6 +118,7 @@ ul {
 			&:hover,
 			&:active {
 				background: $bt-small-default-light;
+				color: #fff;
 			}
 		}
 	}
@@ -97,6 +129,7 @@ ul {
 		&:hover,
 		&:active {
 			background: $principal-bt-ligth;
+			color: #fff;
 		}
 	}
 
@@ -106,18 +139,82 @@ ul {
 		&:hover,
 		&:active {
 			background: $general-bt-ligth;
+			color: #fff;
 		}
 	}	
 }
+.ui-body-c .ui-link { 
+	font-weight: normal;
+	color: #fff;
+	text-shadow: none;
 
+	&:active,
+	&:visited,
+	&:hover { 
+		color: #fff;
+	}
+
+	&.bt-small {
+		
+		&:hover,
+		&:active,
+		&.ui-body-c .ui-link,
+		&.ui-body-c .ui-link { 
+			background: $bt-small-light;
+			color: #fff;
+		}
+
+		&.default {
+			
+			&:hover,
+			&:active,
+			&.ui-body-c .ui-link,
+			&.ui-body-c .ui-link {
+				background: $bt-small-default-light;
+				color: #fff;
+			}
+		}
+	}
+
+	&.principal-button { 
+					
+		&:hover,
+		&:active,
+		&.ui-body-c .ui-link,
+		&.ui-body-c .ui-link { 
+			background: $principal-bt-ligth;
+			color: #fff;
+		}
+	}
+
+	&.general-button { 
+		
+		&:hover,
+		&:active,
+		&.ui-body-c .ui-link,
+		&.ui-body-c .ui-link { 
+			background: $general-bt-ligth;
+			color: #fff;
+		}
+	}
+	&.ui-body-c .ui-link,
+	&.ui-body-c .ui-link {
+		color: #fff;
+		padding: 0;
+	}
+}
 .help {
+	margin: 0 0 20px;
 	display: block;
 	text-align: right;
 
-	a {
+	a,
+	.ui-body-c,
+	.ui-link  {
 		color: #fff;
 		font: 16px/16px "segoeui";
 		text-decoration: none;
+		padding: 0;
 
 		&:hover,
 		&:active {
@@ -125,11 +222,34 @@ ul {
 			@include transition(color 0.3s);
 		}
 	}
+
+	.help.results.ui-link {
+		float: left;
+		background: #46b39c;
+		display: inline-block;
+		margin: 0;
+		padding: 10px 25px;
+		font-size: 12px;
+		position: relative;
+		top: -5px;
+		@include border-radius(4px);
+
+		&:hover,
+		&:active {
+			background: #49b9a1;
+		}
+	}
 }
 
 li.help {
-	a {
-		font: 20px/20px "segoeui";
+	@include clearfix();
+	margin: 0 0 20px;
+
+	a,
+	.ui-body-c,
+	.ui-link {
+		font: 16px/16px "segoeui";
+		padding: 0;
 	}
 }
 

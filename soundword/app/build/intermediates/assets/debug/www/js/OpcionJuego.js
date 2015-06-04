@@ -9,12 +9,12 @@ function OpcionJuego(imagen,  tipo){
 
 OpcionJuego.prototype.mostrar = function(avisar){
 	observador = avisar;
-	
-	var creadorImg = "<img src='"+this.imagen+"' style=\"height:auto; width:auto; max-width:300px; max-height:300px;\" onclick=\"";
+
+	var creadorImg = "<div class='item'><img src='"+this.imagen+"' style=\"height:auto; width:auto; max-width:250px; max-height:250px;\" onclick=\"";
 	if (this.es_correcta){
-		creadorImg += "opcionCorrecta()\"/>";
+		creadorImg += "opcionCorrecta()\"/></div>";
 	}else{
-		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/>";
+		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/></div>";
 	}
 	
 	var img = $(creadorImg );
@@ -36,7 +36,7 @@ opcionIncorrecta = function(tipo){
 
 /*
 Shake image script (onMouseover)- 
-© Dynamic Drive (www.dynamicdrive.com)
+ï¿½ Dynamic Drive (www.dynamicdrive.com)
 For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
 */
 
