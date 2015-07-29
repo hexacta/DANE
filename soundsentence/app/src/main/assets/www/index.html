@@ -1,12 +1,14 @@
 <!DOCTYPE html> 
 <html> 	
 <head> 
-	<title>Page Title</title> 
+	<title>Quien hace que?</title> 
 	
 	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0">
     <link rel="stylesheet" href="css/jquery-ui.css"/>
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" /> 
+	<link rel="stylesheet" href="css/main.css" /> 
+    <link href="css/font-awesome.css" rel="stylesheet">
 		
 	<script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -40,24 +42,73 @@
 
 		</script>
 		<div data-role='header'>
-			<h1>&#191;QUI&Eacute;N HACE QU&Eacute?</h1>
-			<h2> Comprensi&oacute;n auditiva de oraciones</h2>
-			<a href='#help' data-role="button" data-inline="true">?</a>
+			<header class="header">
+			    <div class="brand">
+			        <div class="logo">
+			            <h1>&#191;QUI&Eacute;N HACE <span class="color-brand">QU&Eacute;?</span><span>Comprensi&oacute;n auditiva de oraciones</span></h1>
+			        </div>
+			    </div>
+			</header>
 		</div>
 		<div data-role='content'>
-			<h2> COMPLEJIDAD SINT&Aacute;CTICA (nombre a definir) </h2>
-				<a href='#' data-role="button" data-inline="true" onclick="iniciarJuego(1,1)">F&Aacute;CILES</a>
-				<a href='#' data-role="button" data-inline="true" onclick="iniciarJuego(1,2)">DIF&Iacute;CILES</a>
-			<h2> REVERSIBILIDAD SEM&Aacute;NTICA (nombre a definir)</h2>
-				<a href='#' data-role="button" data-inline="true" onclick="iniciarJuego(2,1)">F&Aacute;CILES</a>
-				<a href='#' data-role="button" data-inline="true" onclick="iniciarJuego(2,2)">DIF&Iacute;CILES</a>
-			<h2> ROLES TEM&Aacute;TICOS (nombre a definir)</h2>
-				<a href='#' data-role="button" data-inline="true" onclick="iniciarJuego(3,1)">F&Aacute;CILES</a>
-				<a href='#' data-role="button" data-inline="true" onclick="iniciarJuego(3,2)">DIF&Iacute;CILES</a>
+            <section class="level-options">
+                <div class="container">
+		            <div class="content-box">
+		                <div class="content-levels">
+		                    <div class="levels">
+		                        <div class="word">
+		                            <h3>COMPLEJIDAD SINT&Aacute;CTICA</h3>
+		                        </div>
+		                        <ul id='sustantivo'>
+		                        	<li>
+										<a href='#' class="bt bt-small default" onclick="iniciarJuego(1,1)">F&Aacute;CILES</a>
+									</li>
+									<li>
+										<a href='#' class="bt bt-small default" onclick="iniciarJuego(1,2)">DIF&Iacute;CILES</a>
+									</li>
+		                        </ul>
+		                    </div>
+		                    <div class="levels">
+		                        <div class="word">
+		                            <h3>REVERSIBILIDAD SEM&Aacute;NTICA</h3>
+		                        </div>
+		                        <ul id='verbo'>
+		                        	<li>
+										<a href='#' class="bt bt-small default" onclick="iniciarJuego(2,1)">F&Aacute;CILES</a>
+		                        	</li>
+		                        	<li>
+		            					<a href='#' class="bt bt-small default" onclick="iniciarJuego(2,2)">DIF&Iacute;CILES</a>
+		                        	</li>
+		                        </ul>
+		                    </div>
+		                    <div class="levels">
+		                        <div class="word">
+		                            <h3>ROLES TEM&Aacute;TICOS</h3>
+		                        </div>
+		                        <ul id='verbo'>
+		                        	<li>
+										<a href='#' class="bt bt-small default" onclick="iniciarJuego(3,1)">F&Aacute;CILES</a>
+		                        	</li>
+		                        	<li>
+		            					<a href='#' class="bt bt-small default" onclick="iniciarJuego(3,2)">DIF&Iacute;CILES</a>
+		                        	</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		            </div>
+	                <ul class="menu">
+	                    <li class="help">
+		                    <a class="help results" href="#fin_juego">VER RESULTADOS</a>
+	                    </li>
+	                </ul>
+		            <p class="help"><a href="#">DEMO <i class="icon-help icon-question-sign"></i></a></p>
+				</div>
+			</section>
 		</div>
-        <div>
-            <a href='#fin_juego' data-role="button" data-inline="true">VER RESULTADOS</a>
-        </div>
+        <section class="choose-words">
+            <div class="container">
+            </div>
+        </section>
 		
 	</div>
 
@@ -67,25 +118,72 @@
 		</div>
 		
 		<div data-role='content' id='cont_juego'>
-			<p>HAGA CLIC EN EL BOT&Oacute;N 'ESCUCHAR SONIDO' PARA ESCUCHAR EL SONIDO, Y SELECCIONE LA IMAGEN CORRECTA. <a href='#' data-role="button" data-inline="true" onclick="escucharConsigna()" id='boton_enunciado'>ESCUCHAR CONSIGNA</a>  </p>
-			<a href='#ejemplo' data-role="button" data-inline="true" id='boton_video_ejemplo'>VER EJEMPLO</a>
-			<a href='#' data-role="button" data-inline="true" id='boton_sonido'>EJECUTAR SONIDO</a>
-			<a href='#' data-role="button" data-inline="true" id='botonSiguiente'  onclick="llamarCambio()">SIGUIENTE</a>
-            <p><strong id='respuesta'></strong></p>
-			<div id='imagenes_juego'>
-			
-			</div>
-            <div id="progressbar"></div>
+            <header>
+                <div class="only brand">
+                    <div class="logo navBar">
+                        <h1>&#191;QUI&Eacute;N HACE <span class="color-brand">QU&Eacute;?</span></h1>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section class="level-options">
+                    <div class="container">
+                        <ul class="breadcrumb">
+                            <li><a href="index.html"><i class="icon-back icon-chevron-left"></i> VOLVER A INICIO</a></li>
+                        </ul>
+                        <div class="content-box">
+                            <p class="subtitle">HAGA CLICK EN "ESCUCHAR" Y SELECCION&Aacute; LA IMAGEN CORRECTA <a href="#" onclick="escucharConsigna()"><i class="icon-audio icon-volume-up"></i></a>
+                            </p>
+							<a href='#' data-role="button" data-inline="true" id='botonSiguiente'  onclick="llamarCambio()">SIGUIENTE</a>
+							<div class="choose-images">
+								<div id="imagenes_juego_0"></div>
+                                <div class="btn-audio">
+                                   	<a href="#" class="bt bt-small" id='boton_sonido'>
+                                   		ESCUCHAR<br/>
+                                    	<i class="icon-audio icon-volume-up"></i>
+                                	</a>
+                                </div>
+								<div id="imagenes_juego_1"></div>
+							</div>
+            				<div id="progressbar"></div>
+            			</div>
+            			<div id='modalcorrect' class="modalCorrect"></div>
+            		</div>
+            	</section>
+            </main>
 		</div>
 	</div>
 	
 	<div data-role='page' id='fin_juego'>
-		<div data-role='header'> 
-			<h1> EJERCICIO TERMINADO</h1>
-		</div>
-		<a href='#select_category' data-inline="true" data-role="button" data-icon="home">Volver</a>		
-		<h3 id='correctas'> RESPUESTAS CORRECTAS:</h3>
-		<h3 id='incorrectas'> RESPUESTAS INCORRECTAS:</h3>
+        <header>
+            <div class="only brand">
+                <div class="logo navBar">
+                    <h1>&#191;QUI&Eacute;N HACE <span class="color-brand">QU&Eacute;?</span></h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="level-options">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="icon-back icon-chevron-left"></i> VOLVER A INICIO</a></li>
+                    </ul>
+                    <div class="content-box">
+                        <h2 class="title-end">PUNTAJE FINAL</h2>
+                        <table class="table">
+                            <colgroup>
+                                <col class="col1" />
+                                <col class="col2" />
+                            </colgroup>
+                            <tbody>
+	                            <tr id="correctas"></tr>
+	                            <tr id="incorrectas"></tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</section>
+		</main>		
 	</div>
 	
 	<div data-role='page' id='ejemplo'>

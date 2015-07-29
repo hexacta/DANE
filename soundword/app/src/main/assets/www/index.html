@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/main.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
 
 	<script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -57,7 +57,7 @@
                         <li><a class="bt general-button" href="#" onclick="goToSelectLevel('contexto')">PALABRAS EN CONTEXTO</a></li>
                         <li class="help">
                             <a class="help results" href="#fin_juego">VER RESULTADOS</a>
-                            <a class="help" href="#">&#191;NECESIT&Aacute;S AYUDA? <i class="icon-help icon-question-sign"></i></a>
+                            <a class="help" href="#">DEMO <i class="icon-help icon-question-sign"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -86,7 +86,6 @@
                             <div class="levels">
                                 <div class="word">
                                     <h3>SUSTANTIVOS</h3>
-                                    <p>SELECCIONE EL NIVEL PARA COMENZAR</p>
                                 </div>
                                 <ul id='sustantivo'>
 
@@ -95,7 +94,6 @@
                             <div class="levels">
                                 <div class="word">
                                     <h3>VERBOS</h3>
-                                    <p>SELECCIONE EL NIVEL PARA COMENZAR</p>
                                 </div>
                                 <ul id='verbo'>
 
@@ -103,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="help"><a href="#">&#191;NECESIT&Aacute;S AYUDA? <i class="icon-help icon-question-sign"></i></a></p>
+                    <p class="help"><a href="#">DEMO <i class="icon-help icon-question-sign"></i></a></p>
                 </div>
             </section>
         </main>
@@ -128,25 +126,26 @@
                             <li><a href="#select_category"><i class="icon-back icon-chevron-left"></i> VOLVER A INICIO</a></li>
                         </ul>
                         <div class="content-box">
-                            <p class="subtitle">HAGA <strong>CLICK EN EL BOT&Oacute;N ESCUCHAR AUDIO</strong> PARA ESCUCHAR EL SONIDO Y SELECCIONE LA IMAGEN CORRECTA.
-                                <div class="btn-audio">
-                                    <a href="#" class="bt bt-small" onclick="escucharConsigna()"><i class="icon-audio icon-volume-up"></i> ESCUCHAR CONSIGNA</a>
-                                    <a href="#" class="bt bt-small" id='boton_sonido'><i class="icon-audio icon-volume-up"></i> ESCUCHAR AUDIO</a>
-                                </div>
+                            <p class="subtitle">HAGA CLICK EN "ESCUCHAR" Y SELECCION&Aacute; LA IMAGEN CORRECTA <a href="#" onclick="escucharConsigna()"> <i class="icon-audio icon-volume-up"></i></a>
                             </p>
                             <!--<div class="see-more"><a href="#"><i class="icon-video icon-facetime-video"></i>VER EJEMPLO</a></div>-->
 
-                            <div class="choose-images" id='imagenes_juego'>
-
+                            <div class="choose-images">
+                                <div id="imagenes_juego_0"></div>
+                                <div class="btn-audio">
+                                    <a href="#" class="bt bt-small" id='boton_sonido'>
+                                        ESCUCHAR<br/>
+                                        <i class="icon-audio icon-volume-up"></i>
+                                    </a>
+                                </div>
+                                <div id="imagenes_juego_1"></div>
                             </div>
                         </div>
-                    <p class="help"><a href="#">&#191;NECESIT&Aacute;S AYUDA? <i class="icon-help icon-question-sign"></i></a></p>
-                    <div id="progressbar"></div>
+                        <div id='modalcorrect' class="modalCorrect"></div>
+                        <p class="help"><a href="#">DEMO <i class="icon-help icon-question-sign"></i></a></p>
+                        <div id="progressbar"></div>
                     </div>
                 </section>
-                <div id='modalcorrect'>
-
-                </div>
             </main>
 		</div>
 	</div>
@@ -203,7 +202,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="help"><a href="#">&#191;NECESIT&Aacute;S AYUDA? <i class="icon-help icon-question-sign"></i></a></p>
+                    <p class="help"><a href="#">DEMO <i class="icon-help icon-question-sign"></i></a></p>
                 </div>
             </section>
         </main>

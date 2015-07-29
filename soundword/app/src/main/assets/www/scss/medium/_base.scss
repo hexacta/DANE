@@ -65,7 +65,7 @@ strong {
 	max-width: 740px;
 	margin: 0 auto;
 
-	@media (min-width: $medium-breakpoint) and (orientation: landscape) { width: 860px }
+	@media (orientation: landscape) { width: 860px }
 
 }
 .ui-content {
@@ -125,7 +125,7 @@ strong {
 
 	&.principal-button { 
 		background: $principal-bt;
-			
+		margin-bottom: 20px;	
 		&:hover,
 		&:active {
 			background: $principal-bt-ligth;

@@ -33,8 +33,8 @@
 			span {
 				color: #404040;
 				display: block;
-				font: 25px/25px "segoeui";
-				margin-top: 20px;
+				font: 24px/24px "segoeui";
+				margin-top: 5px;
 
 				&.color-brand {
 					color: $color-brand;
@@ -68,12 +68,12 @@
 		display: inline;
 
 		&:first-child {
-			margin-right: 45px;
+			margin-right: 25px;
 		}
 
 		&.help {
 			display: block;
-			margin-top: 40px;
+			margin-top: 50px; 
 		}
 	}
 }

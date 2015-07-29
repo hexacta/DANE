@@ -13,7 +13,15 @@ Nivel.prototype.jugarInstancia = function(){
 	//Se mezclan las opciones, y muestran. 
 	this.opciones = shuffle(this.opciones);
 	for (var i = 0; i < this.opciones.length;i++){
-		this.opciones[i].mostrar(this);
+		this.opciones[i].mostrar(this, i);
+	}
+	if(this.opciones.length > 2){
+		$('.btn-audio').removeClass('btn-audio-2');
+		$('.btn-audio').addClass('btn-audio-4');
+	}
+	else{
+		$('.btn-audio').removeClass('btn-audio-4');
+		$('.btn-audio').addClass('btn-audio-2');		
 	}
 	
 	ejecutarAudio(this.audio);

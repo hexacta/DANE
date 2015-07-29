@@ -112,7 +112,7 @@ ADDED from AndroidManifest.xml:49:5
 application
 ADDED from AndroidManifest.xml:50:8
 	android:label
-		ADDED from AndroidManifest.xml:50:60
+		ADDED from AndroidManifest.xml:50:51
 	android:allowBackup
 		ADDED from AndroidManifest.xml:51:9
 	android:icon

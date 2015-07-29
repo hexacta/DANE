@@ -7,18 +7,18 @@ function OpcionJuego(imagen,  tipo){
 	this.es_correcta = this.tipo == CORRECTA;
 }
 
-OpcionJuego.prototype.mostrar = function(avisar){
+OpcionJuego.prototype.mostrar = function(avisar, index){
 	observador = avisar;
 
-	var creadorImg = "<div class='item'><img src='"+this.imagen+"' style=\"height:auto; width:auto; max-width:250px; max-height:250px;\" onclick=\"";
+	var creadorImg = "<div class='item'><div class='content-image'><img src='"+this.imagen+"' style=\"max-height:260px;\" onclick=\"";
 	if (this.es_correcta){
-		creadorImg += "opcionCorrecta()\"/></div>";
+		creadorImg += "opcionCorrecta()\"/></div></div>";
 	}else{
-		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/></div>";
+		creadorImg += "opcionIncorrecta(" + this.tipo + ");init(this);rattleimage(true)\" class=\"shakeimage\"/></div></div>";
 	}
 	
 	var img = $(creadorImg );
-	$("#imagenes_juego").append(img);
+	$("#imagenes_juego_" + index % 2).append(img);
 }
 
 OpcionJuego.prototype.esCorrecta = function (){

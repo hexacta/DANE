@@ -7,7 +7,7 @@ function OpcionJuego(imagen,  tipo){
 	this.es_correcta = this.tipo == CORRECTA;
 }
 
-OpcionJuego.prototype.mostrar = function(avisar){
+OpcionJuego.prototype.mostrar = function(avisar, index){
 	observador = avisar;
 
 	var creadorImg = "<div class='item'><div class='content-image'><img src='"+this.imagen+"' style=\"max-height:260px;\" onclick=\"";
@@ -18,7 +18,7 @@ OpcionJuego.prototype.mostrar = function(avisar){
 	}
 	
 	var img = $(creadorImg );
-	$("#imagenes_juego").append(img);
+	$("#imagenes_juego_" + index % 2).append(img);
 }
 
 OpcionJuego.prototype.esCorrecta = function (){

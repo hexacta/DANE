@@ -54,7 +54,8 @@ function createSentences(){
 function iniciarJuego(tipo,  nivel){
 	//seteamos el juego actual dependiendo del tipo, y jugamos el nivel indicado.
 	$( "#progressbar" ).progressbar({value: 0});
-	$('#imagenes_juego').empty();
+	$('#imagenes_juego_0').empty();
+	$('#imagenes_juego_1').empty();
 	document.getElementById("botonSiguiente").style.visibility = "hidden";
 	$.mobile.changePage('#juego');
 	sonido_activado = true;
@@ -80,7 +81,8 @@ function shuffle(vector){
 var totalCorrectas = 0;
 var totalIncorrectas = 0;
 function llamarCambio(){
-	$('#imagenes_juego').empty();
+	$('#imagenes_juego_0').empty();
+	$('#imagenes_juego_1').empty();
 	document.getElementById("botonSiguiente").style.visibility = "hidden";
 	var cambio = actual.cambiarSubnivel();
 	if (cambio == FIN_NIVEL){
@@ -88,8 +90,11 @@ function llamarCambio(){
 		totalCorrectas += correctas[0];
 		totalIncorrectas += correctas[1];
 		var totales = totalCorrectas + totalIncorrectas;
-		$('#correctas').text('Respuestas Correctas: ' + totalCorrectas + '/' + totales + ' (' + parseFloat((totalCorrectas * 100 / totales).toPrecision(2)) + '%)');
-		$('#incorrectas').text('Respuestas Incorrectas: '+ totalIncorrectas + '/' + totales + ' (' + parseFloat((totalIncorrectas * 100 / totales).toPrecision(2)) + '%)');
+		$('#correctas').empty();
+		$('#incorrectas').empty();
+		$('#correctas').append("<td><img src='images/check1.png' alt='check'/></td><td>RESPUESTAS CORRECTAS<td><td class='right'>" + totalCorrectas + "/" + totales + " (" + parseFloat((totalCorrectas * 100 / totales).toPrecision(2)) + "%)</td>");
+		$('#incorrectas').append("<td><img src='images/check2.png' alt='check'/></td><td>RESPUESTAS INCORRECTAS<td><td class='wrong'>" + totalIncorrectas + "/" + totales + " (" + parseFloat((totalIncorrectas * 100 / totales).toPrecision(2)) + "%)</td>");
+
 		$.mobile.changePage('#select_category');
 	}
 }
@@ -99,12 +104,13 @@ function ejecutarAudio(audio){
 }
 
 function permitirCambio(texto, sonidoCorrecto){
-	$('#respuesta').text(texto);
-	$('#popupCorrecta').popup('open');
+	var modal = "<div class='modal'><div class='content-modal'><div class='modal-option-result'><img src='images/check.png' alt='resultado correcto' /><div class='result'><p>Respuesta correcta</p><span>" + texto + "</span></div></div></div></div>";
+	$("#modalcorrect").append(modal);
+
 	ejecutarAudio(sonidoCorrecto);
 	setTimeout(function(){
-        llamarCambio();
-    	$('#respuesta').text('');
+	    llamarCambio();
+	    $("#modalcorrect").empty();
     }, timeout_change);
 }
 

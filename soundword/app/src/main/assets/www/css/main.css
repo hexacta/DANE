@@ -13,21 +13,21 @@ background: black;
 *******************************************/
 @font-face {
   font-family: "Lobster";
-  src: url("fonts/Lobster.woff") format("woff");
+  src: url("../font/Lobster.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'segoeui';
-  src: url("fonts/segoeui.eot");
-  src: url("fonts/segoeui.eot") format("embedded-opentype"), url("fonts/segoeui.ttf") format("truetype");
+  src: url("../font/segoeui.eot");
+  src: url("../font/segoeui.eot") format("embedded-opentype"), url("../font/segoeui.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'seguisb';
-  src: url("fonts/seguisb.eot");
-  src: url("fonts/seguisb.eot") format("embedded-opentype"), url("fonts/seguisb.ttf") format("truetype");
+  src: url("../font/seguisb.eot");
+  src: url("../font/seguisb.eot") format("embedded-opentype"), url("../font/seguisb.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -96,7 +96,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (orientation: landscape){
+  .modalCorrect{
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  }
+}
+@media all and (orientation: portrait){
+  .modalCorrect{
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  }
+}
+
+@media screen {
   /* line 3, ../scss/medium/components/_screens.scss */
   header .brand.only .logo {
     width: 230px;
@@ -172,12 +187,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .content-box .subtitle {
     color: #577c96;
     font: 15px/22px "segoeui";
-    margin: 0 0 50px;
+    margin: 0 0 10px;
   }
   /* line 78, ../scss/medium/components/_screens.scss */
   .content-box .subtitle a {
     color: #6a88a0;
     font-family: 'seguisb';
+  }
+  .content-box .subtitle a i{
+    color: #6a88a0;
   }
   /* line 82, ../scss/medium/components/_screens.scss */
   .content-box .subtitle a:hover, .content-box .subtitle a:active {
@@ -185,16 +203,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   /* line 89, ../scss/medium/components/_screens.scss */
   .content-box .btn-audio {
-    margin-bottom: 5px;
-    padding-bottom: 20px;
-    border-bottom: solid 1px #D0D0D8;
+    text-align: center;
+    margin-left: 38%;
+    width: 109px;
+    position: absolute;
+    border: white solid 1px;
+    border-radius: 4px;
+    z-index: 1;
+  }
+  .btn-audio-2{
+    margin-top: 15%;
+  }
+  .btn-audio-4{
+    margin-top: 33%;
   }
   /* line 94, ../scss/medium/components/_screens.scss */
   .content-box .btn-audio a {
     color: #fff;
     font-size: 15px;
     padding: 10px 15px;
-    margin-right: 10px;
   }
   /* line 100, ../scss/medium/components/_screens.scss */
   .content-box .btn-audio a:hover, .content-box .btn-audio a:active {
@@ -274,7 +301,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     *zoom: 1;
     width: auto;
     margin-right: -10px;
-    margin: 20px 0 0;
+    margin: 10px 0 10px;
   }
   /* line 96, ../scss/_mixins.scss */
   .content-box .choose-images:before, .content-box .choose-images:after {
@@ -296,10 +323,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   /* line 126, ../scss/_mixins.scss */
   .content-box .choose-images .item {
+    padding-right: 5px;
+    padding-left: 5px;
+    background-clip: content-box;
+  }
+  #imagenes_juego_0{
     float: left;
     width: 50%;
-    padding-right: 10px;
-    background-clip: content-box;
+  }
+  #imagenes_juego_1{
+    float: right;
+    width: 50%;
   }
   /* line 170, ../scss/medium/components/_screens.scss */
   .content-box .choose-images .content-image {
@@ -336,6 +370,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 10px;
   }
 
+  .modalCorrect{
+    z-index: 10;
+  }
   /* line 204, ../scss/medium/components/_screens.scss */
   .content-modal {
     background: #fff;
@@ -344,13 +381,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
-  }
-  /* line 210, ../scss/medium/components/_screens.scss */
-  .content-modal .modal-option-result {
-    border-bottom: solid 1px #dbdbdb;
-    padding: 0 0 30px;
-    margin: 0 0 30px;
-    *zoom: 1;
+    border: #AAAAAA solid 1px;
   }
   /* line 96, ../scss/_mixins.scss */
   .content-modal .modal-option-result:before, .content-modal .modal-option-result:after {
@@ -523,7 +554,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .header {
     background: #fff;
     display: table;
-    min-height: 285px;
+    min-height: 185px;
     margin: 0 0 70px;
     width: 100%;
   }
@@ -562,7 +593,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font: 53px/53px "Lobster";
     padding: 30px 0 0;
     text-align: left;
-    width: 375px;
+    width: 450px;
   }
   /* line 33, ../scss/medium/components/_intro.scss */
   .brand .logo h1 span {
@@ -609,7 +640,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 74, ../scss/medium/components/_intro.scss */
   .menu li.help {
     display: block;
-    margin-top: 50px;
   }
 
   /* line 6, ../scss/medium/_base.scss */
@@ -688,14 +718,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   /* line 64, ../scss/medium/_base.scss */
   .container {
     width: 860px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen {
   /* line 71, ../scss/medium/_base.scss */
   .ui-content {
     padding: 0;
@@ -755,6 +785,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 126, ../scss/medium/_base.scss */
   .bt.principal-button {
     background: #ff9c41;
+    margin-bottom: 20px;
   }
   /* line 129, ../scss/medium/_base.scss */
   .bt.principal-button:hover, .bt.principal-button:active {

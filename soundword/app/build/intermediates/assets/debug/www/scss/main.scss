@@ -5,6 +5,6 @@
 @import "compass/reset";
 @import "compass/css3";
 
-@media screen and (min-width: $medium-breakpoint) {
+@media screen {
   @import 'medium/base';
 }

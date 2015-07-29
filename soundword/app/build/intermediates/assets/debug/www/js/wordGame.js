@@ -93,7 +93,8 @@ function goToSelectLevel(valor){
 function iniciarJuego(tipo, ais_ctx, nivel){
     $( "#progressbar" ).progressbar({value: 0});
 	$.mobile.changePage('#juego');
-	$('#imagenes_juego').empty();
+	$('#imagenes_juego_0').empty();
+	$('#imagenes_juego_1').empty();
 	sonido_activado = true;
 	if(tipo == SUSTANTIVO){
 		if (ais_ctx == AISLADA){
@@ -121,7 +122,8 @@ function shuffle(vector){
 
 var total_elecciones = [0,0,0,0];
 function llamarCambio(){
-	$('#imagenes_juego').empty();
+	$('#imagenes_juego_0').empty();
+	$('#imagenes_juego_1').empty();
 	var cambio = actual.cambiarSubnivel();
 	if (cambio == FIN_NIVEL){
 		var tipos_opciones_elegidas = actual.getElecciones();
