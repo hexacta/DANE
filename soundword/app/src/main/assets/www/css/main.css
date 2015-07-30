@@ -571,6 +571,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     *zoom: 1;
     margin: 0 auto;
     width: 615px;
+    padding-left: 20px;
   }
   /* line 96, ../scss/_mixins.scss */
   .brand .logo:before, .brand .logo:after {
@@ -887,7 +888,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 244, ../scss/medium/_base.scss */
   li.help {
     *zoom: 1;
-    margin: 0 0 20px;
+    margin: 10px 0 20px;
   }
   /* line 96, ../scss/_mixins.scss */
   li.help:before, li.help:after {
