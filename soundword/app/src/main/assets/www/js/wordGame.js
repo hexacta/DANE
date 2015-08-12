@@ -4,8 +4,8 @@ var palabras_contexto_sustantivos = new Palabras();
 var palabras_contexto_verbos = new Palabras();
 var actual = null;
 
-const SUSTANTIVO = 'sustantivo';
-const VERBO = 'verbo';
+const COSAS = 'cosas';
+const ACCIONES = 'acciones';
 const AISLADA = 'aislada';
 const CONTEXTO = 'contexto';
 const CAMBIAR_PANTALLA = true;
@@ -73,15 +73,15 @@ function mostrarBotones(palabras, tipo, ais_ctx){
 function goToSelectLevel(valor){
 	//Se limpia la seleccion, y se manda a agregar los botones dependiendo de si fue elegido por
 	//palabras aisladas o en contexto.`
-	$('#'+SUSTANTIVO).empty();
-	$('#'+VERBO).empty();
+	$('#'+COSAS).empty();
+	$('#'+ACCIONES).empty();
 	if (valor == AISLADA){
-		mostrarBotones(palabras_aisladas_sustantivos, SUSTANTIVO , AISLADA);
-		mostrarBotones(palabras_aisladas_verbos, VERBO, AISLADA);
+		mostrarBotones(palabras_aisladas_sustantivos, COSAS , AISLADA);
+		mostrarBotones(palabras_aisladas_verbos, ACCIONES, AISLADA);
 		anterior = AISLADA;
 	} else if( valor == CONTEXTO){
-		mostrarBotones(palabras_contexto_sustantivos, SUSTANTIVO, CONTEXTO);
-		mostrarBotones(palabras_contexto_verbos, VERBO, CONTEXTO);
+		mostrarBotones(palabras_contexto_sustantivos, COSAS, CONTEXTO);
+		mostrarBotones(palabras_contexto_verbos, ACCIONES, CONTEXTO);
 		anterior = CONTEXTO;
 	}else{
 		goToSelectLevel(anterior);
@@ -96,7 +96,7 @@ function iniciarJuego(tipo, ais_ctx, nivel){
 	$('#imagenes_juego_0').empty();
 	$('#imagenes_juego_1').empty();
 	sonido_activado = true;
-	if(tipo == SUSTANTIVO){
+	if(tipo == COSAS){
 		if (ais_ctx == AISLADA){
 			palabras_aisladas_sustantivos.jugar_nivel(nivel);
 			actual = palabras_aisladas_sustantivos;
